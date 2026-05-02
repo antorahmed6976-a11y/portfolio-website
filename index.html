@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website - Antor Ahmed</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="scroll-progress"></div>
+  <nav>
+    <h2 class="logo">Antor Ahmed</h2>
+
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>Hi, I'm Antor Ahmed</h1>
+    <p>I am a Frontend Developer</p>
+    <button>Hire Me</button>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I am a passionate Frontend Developer who loves building modern, responsive and user-friendly websites using HTML, CSS, and JavaScript.</p>
+        <p>My goal is to create clean and professional web experiences.</p>
+      </div>
+      <div class="about-image">
+        <img src="images/profile-image.jpg" alt="Profile Image">
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skill">
+      <p>HTML</p>
+      <div class="progress-bar">
+        <div class="progress html"></div>
+      </div>
+    </div>
+     <div class="skill">
+      <p>CSS</p>
+      <div class="progress-bar">
+        <div class="progress css"></div>
+      </div>
+    </div>
+     <div class="skill">
+      <p>JavaScript</p>
+      <div class="progress-bar">
+        <div class="progress js"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="project-container">
+      <div class="project-card">
+        <h3>Protfolio Website</h3>
+        <p>A modern responsive portfolio website using HTML & CSS.</p>
+        <button>View Project</button>
+      </div>
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <p>Business landing page with responsive layout.</p>
+        <button>View Project</button>
+      </div>
+      <div class="project-card">
+        <h3>To-Do App</h3>
+        <p>JavaScript based task management app.</p>
+        <button>View Project</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-container">
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Sent Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
