@@ -38,6 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.classList.toggle("active");
   });
 
+  // Navbar Blur On Scroll
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
   //Typing animation
   const typingElement = document.querySelector(".typing");
 
