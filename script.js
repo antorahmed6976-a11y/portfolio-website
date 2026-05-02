@@ -39,6 +39,63 @@ window.addEventListener("scroll", activateNavLink);
     navLinks.classList.toggle("active");
   });
 
+  //Typing animation
+  const typingElement = document.querySelector(".typing");
+
+  const words = ["Frontend Developer", "UI Designer", "JavaScript Developer"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect (){
+    const currentWord = words[wordIndex];
+
+    if(!isDeleting){
+      typingElement.textContent = currentWord.substring(0,charIndex +1);
+      charIndex++;
+
+      if(charIndex === currentWord.length){
+        setTimeout(()=>isDeleting = true, 1000);
+      }
+    }else{
+      typingElement.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+
+      if(charIndex === 0){
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+    }
+    setTimeout(typeEffect, isDeleting ? 50:100);
+  }
+
+  typeEffect();
+
+  // Form validation
+  const form = document.getElementById("contactForm");
+  const formMessage = document.getElementById("formMessage");
+
+  form.addEventListener("submit", function (e){
+    e.preventDefault();
+
+    const name = form.querySelector("input[type='text']").value.trim();
+    const email = form.querySelector("input[type='email']").value.trim();
+    const message = form.querySelector("textarea").value.trim();
+
+
+    if(name === "" || email === "" || message === ""){
+      alert("⚠️ Please fill all fields!");
+      return;
+    }
+
+    if(!email.includes("@") || !email.includes(".")){
+      alert("⚠️ Please enter a valid email!");
+      return;
+    }
+    formMessage.style.display = "block";
+    form.reset();
+  });
+
 
   // Scroll Reveal Animation 
   const revealSections = document.querySelectorAll("section");
